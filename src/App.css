@@ -39,17 +39,19 @@ body {
 
 .search-form {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 20px;
 }
 
 .search-input {
-  width: 60%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   outline: none;
+  flex-grow: 1;
+  margin-right: 10px;
 }
 
 .search-button {
@@ -58,14 +60,22 @@ body {
   background-color: #007bff;
   color: #fff;
   border: 1px solid #007bff;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .search-button:hover {
   background-color: #0056b3;
   border-color: #0056b3;
 }
+
+.search-button:disabled {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  cursor: not-allowed;
+}
+
 
 .loading,
 .error {
